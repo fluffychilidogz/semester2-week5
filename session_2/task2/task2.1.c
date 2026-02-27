@@ -25,9 +25,31 @@ int main(void) {
         
         // TODO: Use fgets to read the input
         
+        fgets(input, 50, stdin);
+        input[strcspn(input, "\n")] = 0;
+
         // TODO: Remove the newline character from input
         // Hint: input[strcspn(input, "\n")] = 0;
+
+        for (int i=0; input[i]!='\0';i++)
+        {
+            if (input[i] =='C' || input[i] == 'c')
+            {
+                scale = 'C';
+                input[i] = 0;
+            }
+
+            if (input[i] =='F' || input[i] == 'f')
+            {
+                scale = 'F';
+                input[i] = 0;
+            }
+
+            valid_input += 1;
+            
+        }
         
+
         // TODO: Parse the input to extract temperature and scale
         // Hint: Use sscanf(input, "%f%c", &temperature, &scale);
         // Advanced: Consider handling input with a degree symbol (°)
