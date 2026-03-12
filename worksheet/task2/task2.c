@@ -18,7 +18,7 @@ int main(void){
 	// if input contains invalid hex digit
 	// printf("Error: Invalid Hexadecimal\n");
 
-	fgets(hex, 8, stdin); // get 8 bits
+	fgets(hex, 9, stdin); // get 9 bits
 	hex[strcspn(hex, "\n")] = 0; // strip whitespace
 
 	for (int i=0; i<strlen(hex);i++)
